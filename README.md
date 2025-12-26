@@ -1,36 +1,118 @@
-PointOfSaleSystem
-Overview
+ Point of Sale (POS) System – Python Console Application
 
-The PointOfSaleSystem is a console-based Python application designed for supermarket-type stores. It allows cashiers to log in, process sales, handle returns, update inventory, and generate receipts. This system also supports backroom operations such as inventory reports and daily sales reports.
+Technologies: Python, File I/O, OOP, UUID, CSV, Git/GitHub
+Concepts: Object-Oriented Programming, Authentication, Inventory Management, Sales Processing
 
-Features
+ Project Overview
 
-User Authentication
+This project is a console-based Point of Sale (POS) system designed to simulate real-world retail operations. The application authenticates users, manages inventory, processes sales and returns, generates receipts, and supports backroom reporting operations. The system emphasizes clean architecture, modular design, and Python fundamentals.
 
-Cashiers log in using a user ID and password.
+ User Authentication
 
-Maximum of 3 failed login attempts; locks user on failure.
+Secure login using User ID and Password
 
-Sales Operations
+Maximum 3 login attempts before lockout
 
-Start new sale and add/remove items.
+Role-based access (Cashier / Admin)
 
-Calculate running totals, generate unique receipt IDs (UUID), and save receipts to file.
+Credentials loaded from an external file
 
-Returns
+ Inventory Management
 
-Single item return.
+Inventory data loaded from RetailStoreItemData.txt
 
-Full sale return.
+Items stored using a dictionary keyed by UPC
 
-Inventory Management
+Tracks:
 
-Load items from RetailStoreItemData.txt.
+Item description
 
-Update item quantities after sales/returns.
+Unit price
 
-Backroom Operations
+Quantity on hand
 
-Inventory report: current stock and threshold.
+Reorder threshold
 
-Daily sales report: total sales per transaction.
+Automatically updates inventory after sales and returns
+
+ Sales & Transactions
+
+Start a new sale and add/remove items by UPC
+
+Real-time running total calculation
+
+Finalize sale with payment processing
+
+Each sale generates a unique receipt ID using UUID
+
+Receipts include:
+
+Items purchased
+
+Quantities
+
+Total amount
+
+Sales history stored for returns and reporting
+
+ Returns Processing
+
+Supports:
+
+Single-item returns
+
+Full sale returns
+
+Inventory is restored automatically after returns
+
+Return amount calculated accurately based on quantities returned
+
+ Backroom Operations & Reports
+
+Inventory report showing:
+
+Item name
+
+Current stock
+
+Reorder threshold
+
+Daily sales summary
+
+Monthly sales aggregation
+
+Receipts saved to files for auditing
+
+ System Design
+
+Modular project structure
+
+Separation of concerns:
+
+Models (Item, Sale, Inventory)
+
+Services (Receipts, Reports)
+
+Security (Authentication)
+
+Easily extensible for:
+
+SQLite database integration
+
+Web-based UI (FastAPI)
+
+Tax and discount rules
+
+ Why This Project Matters
+
+This project demonstrates:
+
+Strong Python fundamentals
+
+Practical use of OOP principles
+
+Real-world retail system logic
+
+Clean code organization
+
+Version control using Git & GitHub
