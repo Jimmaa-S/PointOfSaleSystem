@@ -67,7 +67,7 @@ Inventory is restored automatically after returns
 
 Return amount calculated accurately based on quantities returned
 
- Backroom Operations & Reports
+   Backroom Operations & Reports
 
 Inventory report showing:
 
@@ -83,7 +83,7 @@ Monthly sales aggregation
 
 Receipts saved to files for auditing
 
- System Design
+   System Design
 
 Modular project structure
 
@@ -103,7 +103,7 @@ Web-based UI (FastAPI)
 
 Tax and discount rules
 
- Why This Project Matters
+   Why This Project Matters
 
 This project demonstrates:
 
@@ -116,3 +116,4 @@ Real-world retail system logic
 Clean code organization
 
 Version control using Git & GitHub
+
